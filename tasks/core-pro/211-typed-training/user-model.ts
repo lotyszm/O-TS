@@ -1,3 +1,9 @@
+export interface Address {
+  street: string;
+  city: string;
+  country: string;
+  postalCode: string;
+}
 export interface User {
   id: number;
   firstName: string;
@@ -6,12 +12,7 @@ export interface User {
   age: number;
   isActive: boolean;
   dateOfBirth: Date;
-  address: {
-    street: string;
-    city: string;
-    country: string;
-    postalCode: string;
-  };
+  address: Address;
   phoneNumbers: string[];
   role: 'admin' | 'user' | 'guest';
   lastLoginTimestamp: number;
